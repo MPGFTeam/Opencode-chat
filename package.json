@@ -2,8 +2,8 @@
   "name": "opencode-chat",
   "displayName": "opencode chat",
   "description": "Chat with a headless opencode server, view AI file changes with native VS Code diff",
-  "version": "0.2.0",
-  "publisher": "local",
+  "version": "0.3.0",
+  "publisher": "mmmiiiaaoo",
   "license": "MIT",
   "engines": {
     "vscode": "^1.102.0"
@@ -104,6 +104,32 @@
           "type": "string",
           "default": "",
           "markdownDescription": "Path to the opencode executable (`opencode.exe`). Leave empty to auto-detect (Windows: `C:\\Users\\<user>\\AppData\\Roaming\\npm\\node_modules\\opencode-ai\\bin\\opencode.exe`)."
+        },
+        "opencodeChat.disabledModels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "模型列表中禁用的模型（providerID/modelID），可在聊天面板的模型管理中切换"
+        },
+        "opencodeChat.uiLanguage": {
+          "type": "string",
+          "enum": [
+            "plain",
+            "pro"
+          ],
+          "enumDescriptions": [
+            "白话：通俗易懂的中文说明",
+            "专业：中文 + 英文术语，贴近开发者"
+          ],
+          "default": "plain",
+          "description": "界面文案风格：白话 / 专业"
+        },
+        "opencodeChat.showReasoning": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否显示 AI 的思考过程（reasoning 部分），关闭后折叠"
         }
       }
     }
