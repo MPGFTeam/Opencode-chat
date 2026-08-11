@@ -3,7 +3,7 @@
 连接 headless `opencode serve` 的 VS Code 侧边栏聊天面板。AI 工具渲染为卡片，
 文件改动通过 VS Code 原生 diff 预览。本质是给 `opencode` CLI 一个更好用的 VS Code 界面。
 
-## 特性（v0.3.0）
+## 特性（v0.3.1）
 
 - **引导页**：打开插件先看到连接状态（Server 状态 / 版本 / 端口 / 目录），右上角可关闭
 - **一键启动**：自动定位 opencode.exe → 探测空闲端口 → 以项目目录启动 serve → 自动更新配置并连接
@@ -20,7 +20,7 @@
 ## 安装（VSIX）
 
 ```powershell
-code --install-extension ostv-0.3.0.vsix
+code --install-extension ostv-0.3.1.vsix
 ```
 
 ## 发布（VS Code Marketplace）
